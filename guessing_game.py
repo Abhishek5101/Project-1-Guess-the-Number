@@ -25,18 +25,15 @@ def start_game(count):
     except ValueError:
         print("Error:please input integers only")
         count+=1
-
     else:
         print("Got it\n")
         print("You got in {} tries\n".format(count))
 
-    playagain=input("Would you like to play again?[y/n] \n")
-    if playagain.lower() == "y" :
-        start_game(count)
-    else:
-        print("\tThanks for playing the game")
-
+        playagain=input("Would you like to play again?[y/n] \n")
+        if playagain.lower() == "y" :
+            start_game(count)
+        else:
+            print("\tThanks for playing the game")
 
 if __name__ == '__main__':
-    # Kick off the program by calling the start_game function.
     start_game(count)
