@@ -10,7 +10,7 @@ def start_game(count):
             answer = int(input("Please enter your guess\n"))
             count += 1
             if answer < 1 or answer > 10:
-                raise ValueError("Oops! Please enter the values from 1-10 only")
+                raise ValueError()
             if answer == computer:
                 print("\U0001F44F Congrats You got it. It took you {} attempts".format(count))
                 if count < lowscore:
