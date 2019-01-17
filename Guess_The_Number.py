@@ -1,6 +1,8 @@
 import random
 
 count = 1
+print("Hello There! Welcome to the Guessing game\n"
+      "Please choose the number from 1-10 that I have in mind")
 
 def start_game(count):
     computer = random.randint(1,10)
@@ -30,4 +32,3 @@ def start_game(count):
 
 if __name__ == '__main__':
     start_game(count)
-
