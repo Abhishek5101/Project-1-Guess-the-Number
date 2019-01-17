@@ -12,25 +12,27 @@ def start_game(count):
             count += 1
             if answer < 1 or answer > 10:
                 raise ValueError()
+            if answer == computer:
+                print("\U0001F44F Congrats You got it. It took you {} attempts".format(count))
+                if count < lowscore:
+                    lowscore = count
             elif answer < computer:
                 print("\U0001F9D0 It's higher than that\n")
                 continue
             elif answer > computer:
                 print("\U0001F9D0 It's lower than that\n")
                 continue
-            else:
-                print("\U0001F44F Congrats You got it. It took you {} attempts".format(count))
-                if count < lowscore:
-                    lowscore = count
             playagain = input("would you like to play again? [y/n]\n")
             if playagain.lower() == "y":
                 count = 0
                 computer = random.randint(1,10)
                 print("beat the score of {} to do the best".format(lowscore))
                 continue
-            else:
+            elif playagain.lower() == "n":
                 print(" \U0001F600 Thank You for playing this silly little game with us\n")
                 break
+            else:
+                continue
         except ValueError:
             count += 1
             print("please enter valid input. Only integers from 1-10")
