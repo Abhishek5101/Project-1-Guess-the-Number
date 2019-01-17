@@ -20,6 +20,7 @@ def start_game(count):
                 print("\U0001F9D0 It's Lower than that\n")
                 continue
             print("\U0001F44F Congrats!You got it in {} tries".format(count))
+            print("\U0001F600 Thank You for playing this silly little game with us")
             break
 
         except ValueError:
