@@ -1,6 +1,7 @@
 import random
 
 count=0
+
 def start_game(count):
     lowscore=999
     print("Guess a number between 1-10 that I have in mind?")
@@ -11,16 +12,16 @@ def start_game(count):
             count += 1
             if answer < 1 or answer > 10:
                 raise ValueError()
-            if answer == computer:
-                print("\U0001F44F Congrats You got it. It took you {} attempts".format(count))
-                if count < lowscore:
-                    lowscore = count
             elif answer < computer:
                 print("\U0001F9D0 It's higher than that\n")
                 continue
             elif answer > computer:
                 print("\U0001F9D0 It's lower than that\n")
                 continue
+            else:
+                print("\U0001F44F Congrats You got it. It took you {} attempts".format(count))
+                if count < lowscore:
+                    lowscore = count
             playagain = input("would you like to play again? [y/n]\n")
             if playagain.lower() == "y":
                 count = 0
