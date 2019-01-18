@@ -11,7 +11,7 @@ def start_game(count):
             answer = int(input("Please enter your guess\n "))
             if answer < 1 or answer > 10:
                 count += 1
-                print("please only input values from 1 to 5\n")
+                print("please only input values from 1 to 10\n")
                 continue
             if answer < computer:
                 count += 1
